@@ -1,0 +1,349 @@
+/* إعدادات عامة لجميع العناصر */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* تم التعديل */
+.container {
+  width:85%;
+  margin: auto;
+}
+
+/* إعدادات الجسم */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  margin-top: 80px; /* لتجنب تغطية محتوى الرأس */
+}
+
+/* إعدادات الرأس */
+header {
+   padding: 20px 0; /* تمت ازالة البادينج  اليمين والشمال لأن الكونتينر قايم بالواجب*/
+  background-color: black;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #b74b4b;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  color: #b74b4b;
+}
+
+/* إعدادات أقسام الصفحة */
+.home {
+  height: 100vh;
+  padding: 0;
+  gap: 50px;
+}
+
+.home .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.home-img {
+  flex: 1;
+}
+
+.home-img img {
+  width: 93%;
+  max-width: 400px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.home-content {
+  flex: 2;
+  text-align: left;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.home-content span {
+  color: #b74b4b;
+}
+
+.home-content p {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+/* إعدادات الأيقونات الاجتماعية */
+.icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 2rem;
+  justify-content: left;
+}
+
+.icons a {
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.4s ease-in-out, color 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
+  position: relative;
+}
+
+.icons a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: #b74b4b;
+  border-radius: 50%;
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out, top 0.4s ease-in-out, left 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.icons a:hover {
+  color: #000;
+  transform: scale(1.5) rotate(360deg) translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(183, 75, 75, 0.8);
+}
+
+.icons a:hover::before {
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: -25%;
+}
+
+/* إعدادات الأزرار */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: black;
+  color: #b74b4b;
+  border: 2px solid #b74b4b;
+  border-radius: 25px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #b74b4b;
+  color: black;
+}
+
+img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+section.cards {
+  margin: 100px 0;
+}
+
+section.cards .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+  color: #b74b4b;
+  font-size: 2.2em;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.contenet {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 21.25em;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 15px;
+  background-color: #090b08;
+  color: #e0e0e0;
+  transition: transform 0.3s ease, box-shadow 0.7s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  color: #b74b4b;
+  font-size: 4em;
+}
+
+.info h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 10px;
+  color: #b74b4b;
+}
+
+.info {
+  text-align: center;
+}
+
+.info p {
+  color: #e0e0e0;
+}
+
+.contact {
+  background-color: #090b08;
+  padding: 50px 9%;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact label {
+  font-size: 1.1rem;
+  color: #b74b4b;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #b74b4b;
+  background-color: #1c1c1c;
+  color: white;
+}
+
+.contact button {
+  background-color: black;
+  color: #b74b4b;
+  border: 2px solid #b74b4b;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #b74b4b;
+  color: black;
+}
+
+footer {
+  justify-content: space-between;
+  display: flex;
+  padding: 2em;
+}
+
+.footer-titile span {
+  color: #b74b4b;
+}
+
+/* تحسين تصميم الـ Responsive للشاشات المختلفة */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-img img {
+    max-width: 70%;
+  }
+
+  .contenet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .icons {
+    justify-content: center;
+  }
+
+  .contact form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .contenet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 70%;
+  }
+}
